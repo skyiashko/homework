@@ -243,3 +243,17 @@ function highAndLow(string){
 
 var result = highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6");
 console.log( result ); // "542 -214"
+
+/* Task 10
+Напишите функцию checkNumber, которая получает на вход как параметр массив любых
+значений и возвращает true, если все элементы - числа, и false - если в массиве
+хотя бы  одно не число. Для проверки массива используйте метод every или some
+*/
+
+function checkNumber(array){
+
+  return array.every(element => !isNaN(element));
+}
+
+console.log(checkNumber([1, 2, '3', 'a']));
+console.log(checkNumber([1, 2, '3', '4']));
